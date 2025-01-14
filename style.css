@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --clrTheme100: rgb(189, 210, 246);
+    --clrTheme400: rgb(119, 148, 210);
+    --clrTheme900: #373a9c;
+    --cltThemeOmbre: linear-gradient(to left, 
+    var(--clrTheme900) 30%, var(--clrTheme100));
+
+    --clrMain100: white;
+    --clrMain900: black;
+
+    --ffTheme: "Poppins", serif;
+    --ffAccent: Arial, Helvetica, sans-serif; 
+
+    --homeBGImage: url("./images/bar1.avif");
+    --cocktailImage: url("./images/craftedCocktail2.avif");
+    --beerImage: url("./images/beerTap2.avif");
+    --wineImage: url("./images/wine1.avif");
+    --barFoodImage: url("./images/barFood1.avif");
+    --barBrunchImage: url("./images/barBrunch1.avif");
+    --barDessertImage: url("./images/barDesserts1.avif");
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100dvw;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    width: fit-content;
+    padding: 5px 10px;
+    list-style: none;
+    border-radius: .5rem;
+    border: 1px solid var(--clrTheme400);
+    background-color: var(--clrTheme900);
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+    background-color: var(--clrTheme100);
+    color: var(--clrMain100);
+    box-shadow: 2px 2px 15px var(--clrTheme100);
+}
+
+.secondaryBtn {
+    background-color: transparent;
+}
+
+.primaryBtn a,
+.secondaryBtn a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--clrMain900);
+}
+
+.primaryBtn a {
+    color: var(--clrMain100);
+}
+
+.primaryBtn a:hover,
+.secondaryBtn a:hover {
+    color: var(--clrMain100);
+}
+
+header {
+    width: 100dvw;
+    height: auto;
+    position: relative;
+}
+
+#navBar {
+    display: flex;
+    position: absolute;
+    width: 100dvw;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 9%;
+    font-size: clamp(.5rem, 6vw, 1rem);
+    border-bottom: .25px solid var(--clrTheme100);
+    box-shadow: 3px 3px 10px var(--clrTheme100);
+    z-index: 100;
+}
+
+#navBar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navBar ul li a {
+    margin-left: 70px;
+    text-decoration: none;
+    color: var(--clrMain900);
+}
+
+#navBar ul li a:hover {
+    color: var(--clrTheme400);
+}
+
+#home {
+    width: 100dvw; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    padding: 5rem 0;
+}
+
+#home h1,
+#home p {
+    max-width: 50%;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 15vw, 4.5rem);
+    font-weight: 500;
+}
+
+p {
+    font-size: clamp(.75rem, 7vw, 1.25rem);
+    font-weight: 200;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 2rem;
+}
+
+.socialIcons li:hover {
+    color: var(--clrTheme400);
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#galleryContainer {
+    width: 100%;
+    margin: 0 2rem;
+    overflow: hidden;
+    mask: linear-gradient(
+        to left,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        );
+    -webkit-mask: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 20%,
+        rgba(0, 0, 0, 1) 80%,
+        rgba(0, 0, 0, 0)
+        );
+}
+
+.imageCardContainer {
+    display: flex;
+    width: 5280px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    animation: scrollLeft 100s linear infinite;
+}
+
+.imageCard {
+    flex-shrink: 0;
+    width: 300px;
+    height: 200px;
+    margin: 0 15px;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 15px var(--clrTheme400);
+    overflow: hidden;
+}
+
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-5280px); /* Total width of 16 cards + margins */
+    }
+}
+
+#menuDrinks,
+#menuFood {
+    width: 100dvw;  
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clrTheme100);
+    padding: 3rem 9%;
+    text-align: center;
+    color: var(--clrMain100);
+    text-shadow: 2px 2px 8px var(--clrMain900);
+}
+
+#menuFood {
+    background-color: var(--clrMain100);
+    color: var(--clrMain900);
+    text-shadow: none;
+}
+
+#drinkText,
+#foodText {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,
+p {
+    width: 70%;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-weight: 500;
+}
+
+#drinkOptions,
+#foodOptions {
+    display: flex;
+    width: 100%;
+    padding: 2rem 9%;
+    justify-content: center;
+    align-items: center;
+}
+
+#menuDrinks h3 {
+    width: 100%;
+    font-size: 2.25rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px var(--clrMain900);
+}
+
+.menuCard {
+    width: 350px;
+    height: 600px;
+
+}
+
+.menuCard p {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 2rem 1%;
+    text-align: center;
+    text-shadow: 2px 2px 5px var(--clrMain900);
+}
+
+.imgCard {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    margin: 3rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 15px var(--clrMain900);
+    box-sizing: border-box;
+    color: var(--clrMain100);
+    padding: .5rem auto;
+}
+
+.imgCard:hover {
+    opacity: 1;
+    scale: 1.5;
+    /* transform: rotate(-20deg); */
+    transition: 5ms ease-in-out;
+    color: var(--clrMain900);
+}

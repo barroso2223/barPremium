@@ -1,0 +1,27 @@
+{
+  "name": "barpremium",
+  "version": "1.0.0",
+  "description": "Sample Premium Bar Website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "build:css": "npx tailwindcss -i ./style.css -o ./output.css --watch",
+    "build:prod": "NODE_ENV=production npx tailwindcss -i ./style.css -o ./output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barroso2223/barPremium.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barroso2223/barPremium/issues"
+  },
+  "homepage": "https://github.com/barroso2223/barPremium#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17"
+  }
+}
