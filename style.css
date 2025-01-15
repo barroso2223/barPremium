@@ -44,7 +44,7 @@ html {
 
 .primaryBtn,
 .secondaryBtn {
-    width: fit-content;
+    width: max-content;
     padding: 5px 10px;
     list-style: none;
     border-radius: .5rem;
@@ -82,15 +82,13 @@ html {
 header {
     width: 100dvw;
     height: auto;
-    position: relative;
 }
 
 #navBar {
     display: flex;
-    position: absolute;
     width: 100dvw;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px 9%;
     font-size: clamp(.5rem, 6vw, 1rem);
@@ -102,16 +100,22 @@ header {
 #navBar ul {
     display: flex;
     list-style: none;
+    padding: 0 auto;
 }
 
 #navBar ul li a {
-    margin-left: 70px;
+    margin-left: 90px;
     text-decoration: none;
     color: var(--clrMain900);
 }
 
 #navBar ul li a:hover {
     color: var(--clrTheme400);
+}
+
+#navBar .buttons {
+    margin-left: 100px;
+    gap: 2rem;
 }
 
 #home {
@@ -239,12 +243,16 @@ img {
     align-items: center;
 }
 
-h2,
-p {
-    width: 70%;
+#drinkText h2,
+#drinkText p,
+#foodText h2,
+#foodText p {
+    max-width: 65%;
 }
 
-h2 {
+#drinkText h2,
+#foodText h2
+ {
     font-size: clamp(1.5rem, 10vw, 3rem);
     font-weight: 500;
 }
@@ -256,35 +264,55 @@ h2 {
     padding: 2rem 9%;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 
-#menuDrinks h3 {
+#drinkText p,
+#foodText p {
+    font-size: clamp(1rem, 8vw, 1.5rem);
+    margin: 1rem auto;
+}
+
+.menuCard h3 {
     width: 100%;
     font-size: 2.25rem;
     text-align: center;
     text-shadow: 2px 2px 5px var(--clrMain900);
 }
 
+
+
 .menuCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     width: 350px;
     height: 600px;
-
+    gap: 2rem;
+    overflow: hidden;
 }
 
 .menuCard p {
     width: 100%;
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
-    padding: 2rem 1%;
+    padding: 1rem 9%;
     text-align: center;
     text-shadow: 2px 2px 5px var(--clrMain900);
+}
+
+.foodCard p,
+.foodCard h3 {
+    text-shadow: none;
 }
 
 .imgCard {
     position: relative;
     z-index: 1;
-    width: 300px;
+    width: 100%;
     height: 300px;
     margin: 3rem;
     overflow: hidden;
@@ -293,6 +321,10 @@ h2 {
     box-sizing: border-box;
     color: var(--clrMain100);
     padding: .5rem auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imgCard:hover {
@@ -301,4 +333,25 @@ h2 {
     /* transform: rotate(-20deg); */
     transition: 5ms ease-in-out;
     color: var(--clrMain900);
+}
+
+.imgCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 480px;) {
+    #navBar {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #drinkOptions,
+    #menuFood {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
 }
