@@ -317,12 +317,12 @@ img {
 .imgCard {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 95%;
     height: 300px;
     margin: 3rem;
     overflow: hidden;
     border-radius: .5rem;
-    box-shadow: 3px 3px 15px var(--clrMain900);
+    box-shadow: 3px 3px 10px var(--clrMain900);
     box-sizing: border-box;
     color: var(--clrMain100);
     padding: .5rem auto;
@@ -347,9 +347,22 @@ img {
 }
 
 @media screen and (max-width: 980px;) {
-    #navBar {
+    header {
+        width: 100dvw;
+        width: 100dvw;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    #navBar {
+        width: 100dvw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: auto;
     }
 
