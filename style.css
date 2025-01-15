@@ -94,7 +94,7 @@ header {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding: 15px 9%;
+    padding: 15px 5%;
     font-size: clamp(.5rem, 15vw, 1rem);
     border-bottom: .25px solid var(--clrTheme100);
     box-shadow: 3px 3px 10px var(--clrTheme100);
@@ -242,7 +242,7 @@ img {
     justify-content: center;
     align-items: center;
     background-color: var(--clrTheme100);
-    padding: 3rem 9%;
+    padding: 3rem 5%;
     text-align: center;
     color: var(--clrMain100);
     text-shadow: 2px 2px 8px var(--clrMain900);
@@ -388,5 +388,5 @@ img {
     p {
         width: 100%;
         text-align: center;
-}
+    }
 }
