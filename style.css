@@ -31,6 +31,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 *,
 *::before,
@@ -155,7 +159,7 @@ header {
 
 #home h1,
 #home p {
-    max-width: 50%;
+    width: 70%;
     text-align: center;
 }
 
@@ -268,7 +272,7 @@ img {
 #drinkText p,
 #foodText h2,
 #foodText p {
-    max-width: 75%;
+    width: 75%;
 }
 
 #drinkText h2,
@@ -303,7 +307,7 @@ img {
     text-align: center;
     width: 350px;
     height: 600px;
-    gap: 2rem;
+    gap: 1rem;
     overflow: hidden;
     margin: 1rem auto;
 }
@@ -320,7 +324,7 @@ img {
     font-size: 1.3rem;
     font-weight: 300;
     text-align: center;
-    padding: 1rem 9%;
+    padding: 0 5%;
     text-align: center;
     text-shadow: 2px 2px 5px var(--clrMain900);
 }
@@ -381,12 +385,26 @@ img {
 
     h1 {
         font-size: 2rem;
+        width: 100%;
     }
 
-    h1,
     h2,
     p {
         width: 100%;
         text-align: center;
+    }
+
+    p {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .menuCard img {
+        order: 1;
+    }
+
+    .menuCard h3,
+    .menuCard p {
+        order: 2;
     }
 }
