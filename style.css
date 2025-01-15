@@ -145,12 +145,12 @@ header {
 }
 
 h1 {
-    font-size: clamp(1.5rem, 15vw, 4.5rem);
+    font-size: clamp(1.5rem, 20vw, 4.5rem);
     font-weight: 500;
 }
 
 p {
-    font-size: clamp(.75rem, 7vw, 1.25rem);
+    font-size: clamp(.75rem, 15vw, 1.25rem);
     font-weight: 200;
 }
 
@@ -259,7 +259,7 @@ img {
 #drinkText h2,
 #foodText h2
  {
-    font-size: clamp(1.5rem, 10vw, 3rem);
+    font-size: clamp(1.5rem, 20vw, 3rem);
     font-weight: 500;
     margin: 2rem auto;
 }
@@ -347,7 +347,7 @@ img {
     object-fit: cover;
 }
 
-@media screen and (min-width: 980px;) {
+/* @media screen and (min-width: 980px;) {
 
     #navBar {
         width: 100dvw;
@@ -364,4 +364,4 @@ img {
     max-width: 90%;
     text-align: center;
 }
-}
+} */
