@@ -193,11 +193,12 @@ img {
 
 .imageCardContainer {
     display: flex;
-    width: 5280px;
+    width: max-content;
     position: relative;
     overflow: hidden;
     height: 400px;
-    animation: scrollLeft 100s linear infinite;
+    flex-wrap: nowrap;
+    animation: scrollLeft 80s linear infinite;
 }
 
 .imageCard {
@@ -212,11 +213,8 @@ img {
 
 
 @keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
     100% {
-        transform: translateX(-5280px); /* Total width of 16 cards + margins */
+        transform: translateX(-50%); /* Total width of 16 cards + margins */
     }
 }
 
@@ -255,7 +253,7 @@ img {
 #drinkText p,
 #foodText h2,
 #foodText p {
-    max-width: 65%;
+    max-width: 75%;
 }
 
 #drinkText h2,
@@ -272,7 +270,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-items: center;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 1rem 9%;
     gap: 3rem;
 }
 
