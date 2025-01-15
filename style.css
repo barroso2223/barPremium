@@ -87,6 +87,7 @@ header {
 
 #navBar {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     justify-content: space-between;
@@ -101,12 +102,13 @@ header {
 #logoContainer {
     width: 100px;
     height: 50px;
+    margin: 0 auto;
 }
 
 #navBar ul {
     display: flex;
     list-style: none;
-    padding: 0 auto;
+    margin: 1rem auto;
 }
 
 #navBar ul li a {
@@ -347,24 +349,15 @@ img {
     object-fit: cover;
 }
 
-@media screen and (max-width: 980px;) {
-    header {
-        width: 100dvw;
-        width: 100dvw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-    }
+@media screen and (min-width: 980px;) {
 
     #navBar {
         width: 100dvw;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: auto;
+        gap: 1rem;
+        padding: 1rem;
     }
 
     h1,
