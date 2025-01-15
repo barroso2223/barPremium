@@ -27,7 +27,7 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100dvw;
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -81,7 +81,7 @@ html {
 }
 
 header {
-    width: 100dvw;
+    width: 100vw;
     height: auto;
 }
 
@@ -142,7 +142,7 @@ header {
 }
 
 #home {
-    width: 100dvw; 
+    width: 100vw; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -235,7 +235,7 @@ img {
 
 #menuDrinks,
 #menuFood {
-    width: 100dvw;  
+    width: 100vw;  
     height: auto;
     display: flex;
     flex-direction: column;
