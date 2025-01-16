@@ -514,6 +514,7 @@ img {
     width: 100dvw;
     height: auto;
     margin: 3rem auto;
+    background-color: var(--clrTheme400);
 }
 
 #contactDiv {
@@ -536,9 +537,11 @@ img {
 .contactContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 1rem auto;
-    gap: 1rem;
+    gap: 4rem;
     overflow: hidden;
 }
 
