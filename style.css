@@ -366,7 +366,147 @@ img {
     object-fit: cover;
 }
 
-@media screen and (max-width: 580px ) {
+#about {
+    width: 100vw;
+    height: auto;
+    padding: 2rem 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--clrTheme100);
+}
+
+#about h2 {
+    font-size: clamp(2rem, 20vw, 3rem);
+    padding: 2rem auto;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+#about .aboutBody {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.aboutBody p,
+.aboutBody .aboutImage {
+    min-width: 300px;
+    place-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.aboutImage{
+    width: clamp(300px, 90vw, 600px);
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 10px var(--clrTheme400);
+} 
+
+.aboutBody img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5;
+    overflow: hidden;
+}
+
+#events {
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#events h2 {
+    font-size: clamp(2rem, 20vw, 3rem);
+    text-align: center;
+    font-weight: 500;
+}
+
+.eventContainer {
+    position: relative;
+    width: 90%;
+    height: 400px; /* Height of one card */
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.eventCarousel {
+    position: absolute;
+    width: 100%;
+    height: calc(400px * 4); /* Total height: 4 cards */
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    animation: slideSnap 20s infinite; /* Animation for the sliding effect */
+}
+
+.eventCard {
+    flex: 0 0 400px; /* Ensure each card takes the full height of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clrMain900);
+    position: relative;
+}
+
+.eventText {
+    position: absolute; /* Places the text over the image */
+    top: 0;
+    left: 0;
+    width: 100%; /* Matches the width of the image */
+    height: 100%; /* Matches the height of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay for readability */
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.eventCarousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+}
+
+@keyframes slideSnap {
+    0%, 30% {
+        transform: translateY(0); /* Show first image */
+    }
+    35%, 65% {
+        transform: translateY(-400px); /* Show second image */
+    }
+    70%, 100% {
+        transform: translateY(-400px); /* Show third image */
+    }
+    105%, 135% {
+        transform: translateY(-400px); /* Show fourth image */
+    }
+    140%, 170% {
+        transform: translateY(0); /* Loop back to first image */
+    }
+}
+
+
+@media screen and (max-width: 100px ) {
     #navBar {
         display: flex;
         justify-content: center;
@@ -394,7 +534,7 @@ img {
         text-align: center;
     }
 
-    p {
+    p * {
         width: 100%;
         font-size: 1rem;
     }
@@ -405,6 +545,24 @@ img {
 
     .menuCard h3,
     .menuCard p {
+        order: 2;
+    }
+
+    .aboutBody {
+        display: grid;
+        place-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .aboutBody .aboutImage {
+        order: 0;
+        margin: 0 auto;
+        place-content: center;
+        align-items: center;
+    }
+
+    .aboutBody p {
         order: 2;
     }
 }
